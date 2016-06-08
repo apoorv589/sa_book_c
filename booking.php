@@ -64,7 +64,7 @@ class Booking extends MY_Controller
 			  	'boarding_required' => $this->input->post('boarding_required'),
 			  	'school_guest' => $this->input->post('school_guest')
 		);
-		if($data['purpose']==0)
+		if(!isset($_POST['purpose']))
 		{
 			$data['purpose']="personal";	
 		}
